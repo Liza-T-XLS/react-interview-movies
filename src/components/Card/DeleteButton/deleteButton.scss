@@ -1,0 +1,12 @@
+.deleteButton {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1.3rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0;
+  &:hover, &:active {
+    color: red;
+  }
+}
