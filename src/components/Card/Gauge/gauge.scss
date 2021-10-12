@@ -1,0 +1,12 @@
+@import '../../../styles/vars';
+
+.gauge {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: grey;
+  height: 0.3rem;
+  .likes {
+    background-color: $likeColor;
+    height: 100%;
+  }
+}
