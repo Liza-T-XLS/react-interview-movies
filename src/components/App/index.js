@@ -10,18 +10,28 @@ import CategoryFilter from '../../containers/CategoryFilter';
 
 // == Component
 
-const App = ({movies, loadMovies}) => {
+const App = ({ movies, loadMovies, chosenCategory }) => {
   useEffect(() => {
     loadMovies();
   }, [loadMovies]);
   return (
     <div className="app">
       <CategoryFilter />
-      <div className="cards">
-      {movies.map((movie) => (
-        <Card key={movie.id} {...movie} />
-      ))}
-      </div>
+      {chosenCategory === '0' && 
+        <div className="cards">
+          {movies.map((movie) => (
+            <Card key={movie.id} {...movie} />
+          ))}
+        </div>
+      }
+      {chosenCategory !== '0' && (
+        <div className="cards">
+          {movies.filter((movie) => movie.category === chosenCategory)
+          .map((movie) => (
+            <Card key={movie.id} {...movie} />
+          ))}
+        </div>
+      )}
     </div>
   );
 } 

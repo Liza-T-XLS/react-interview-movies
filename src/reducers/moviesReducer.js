@@ -1,11 +1,12 @@
 // == Imports
 
-import { SAVE_MOVIES, DELETE_MOVIE, UPDATE_LIKES, UPDATE_DISLIKES } from '../actions/movies';
+import { SAVE_MOVIES, DELETE_MOVIE, UPDATE_LIKES, UPDATE_DISLIKES, FILTER_BY_CATEGORY } from '../actions/movies';
 
 // == Initial State
 
 const initialState = {
   movies: [],
+  chosenCategory: '0',
 };
 
 // == Reducer
@@ -46,6 +47,11 @@ const moviesReducer = (state = initialState, action = {}) => {
         movies: updatedMovies,
       };
     };
+    case FILTER_BY_CATEGORY:
+      return {
+        ...state,
+        chosenCategory: action.category,
+      };
     default: return state;
   }
 };

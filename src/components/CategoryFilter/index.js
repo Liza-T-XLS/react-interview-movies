@@ -7,7 +7,7 @@ import './categoryFilter.scss';
 
 // == Component
 
-const CategoryFilter = ({ movies }) => {
+const CategoryFilter = ({ movies, filterByCategory }) => {
   useEffect(() => {
   }, [movies]);
 
@@ -24,10 +24,16 @@ const CategoryFilter = ({ movies }) => {
     }
   });
 
+  const selectOnChangeHandler = (e) => {
+    console.log(e.target.value);
+    const category = e.target.value;
+    filterByCategory(category);
+  };
+
   return (
     <div className="categoryFilter">
-      <select>
-        <option defaultValue="0">Filter by category</option>
+      <select onChange={selectOnChangeHandler}>
+        <option defaultValue value="0">Filter by category</option>
         {options.map((option) => 
           <option key={option} value={option}>{option}</option>
         )}
@@ -40,6 +46,7 @@ const CategoryFilter = ({ movies }) => {
 
 CategoryFilter.propTypes = {
   movies: PropTypes.array.isRequired,
+  filterByCategory: PropTypes.func.isRequired,
 };
 
 // == Export

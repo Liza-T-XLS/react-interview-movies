@@ -5,6 +5,7 @@ export const SAVE_MOVIES = 'SAVE_MOVIES';
 export const DELETE_MOVIE = 'DELETE_MOVIE';
 export const UPDATE_LIKES = 'UPDATE_LIKES';
 export const UPDATE_DISLIKES = 'UPDATE_DISLIKES';
+export const FILTER_BY_CATEGORY = 'FILTER_BY_CATEGORY';
 
 // == action creators
 
@@ -32,4 +33,9 @@ export const updateDislikes = (movieId, number) => ({
   type: UPDATE_DISLIKES,
   movieId,
   number,
+});
+
+export const filterByCategory = (category) => ({
+  type: FILTER_BY_CATEGORY,
+  category,
 });

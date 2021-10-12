@@ -7,8 +7,13 @@ import './deleteButton.scss';
 
 // == Component
 
-const DeleteButton = ({movieId, deleteMovie}) => {
+const DeleteButton = ({ movies, movieId, deleteMovie, filterByCategory }) => {
   const deleteButtonOnClickHandler = () => {
+    const movieCategory = movies.find((movie) => movie.id === movieId).category;
+    const moviesOfSameCategory = movies.filter((movie) => movie.category === movieCategory);
+    if (moviesOfSameCategory.length <= 1) {
+      filterByCategory('0');
+    };
     deleteMovie(movieId);
   };
 
@@ -20,8 +25,10 @@ const DeleteButton = ({movieId, deleteMovie}) => {
 // == PropTypes
 
 DeleteButton.propTypes = {
+  movies: PropTypes.array.isRequired,
   movieId: PropTypes.string.isRequired,
   deleteMovie: PropTypes.func.isRequired,
+  filterByCategory: PropTypes.func.isRequired,
 };
 
 // == Export
