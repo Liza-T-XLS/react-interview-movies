@@ -1,3 +1,5 @@
+@import '../../../styles/vars';
+
 .deleteButton {
   border: none;
   background: none;
@@ -7,6 +9,6 @@
   right: 0.2rem;
   top: 0;
   &:hover, &:active {
-    color: red;
+    color: $dislikeColor;
   }
 }

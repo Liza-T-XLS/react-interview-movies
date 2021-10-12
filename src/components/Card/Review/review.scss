@@ -8,12 +8,12 @@
     margin: 0.5rem;
   }
   .likeButton {
-    &:hover, &:active {
+    &:hover, &:active, &.active {
       filter: $likeFilter;
     }
   }
   .dislikeButton {
-    &:hover, &:active {
+    &:hover, &:active, &.active {
       filter: $dislikeFilter;
     }
   }

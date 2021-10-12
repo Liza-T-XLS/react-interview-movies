@@ -7,7 +7,7 @@ import './card.scss';
 
 import DeleteButton from '../../containers/Card/DeleteButton';
 import Gauge from '../../containers/Card/Gauge';
-import Review from '../../components/Card/Review';
+import Review from '../../containers/Card/Review';
 
 // == Component
 
@@ -18,7 +18,7 @@ const Card = ({movie}) => {
       <h2 className="title">{movie.title}</h2>
       <span>{movie.category}</span>
       <Gauge likes={movie.likes} dislikes={movie.dislikes} />
-      <Review />
+      <Review movieId={movie.id} />
     </div>
   );
 } 
