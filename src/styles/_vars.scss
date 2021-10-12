@@ -1,1 +1,9 @@
-$likeColor: #f91880;
+// == colors
+
+$likeColor: #00ba7c;
+$dislikeColor: #a9b3bb;
+
+// == filters
+
+$likeFilter: invert(39%) sepia(89%) saturate(1165%) hue-rotate(131deg) brightness(100%) contrast(101%);
+$dislikeFilter: invert(81%) sepia(8%) saturate(333%) hue-rotate(164deg) brightness(89%) contrast(84%);

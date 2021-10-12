@@ -1,12 +1,47 @@
 @import '../../../styles/vars';
 
-.gauge {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  background-color: grey;
-  height: 0.3rem;
-  .likes {
-    background-color: $likeColor;
-    height: 100%;
+.gaugeContainer {
+  .gaugeDiv {
+    display: flex;
+    justify-content: space-between;
+    .satisfied {
+      display: flex;
+      flex-direction: column;
+      .satisfiedIcon {
+        height: 1.5rem;
+        filter: $likeFilter;
+      }
+    }
+    .gauge {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: $dislikeColor;
+    height: 0.3rem;
+    width: 70%;
+      .likes {
+        background-color: $likeColor;
+        height: 100%;
+      }
+    }
+    .dissatisfied {
+      display: flex;
+      flex-direction: column;
+      .dissatisfiedIcon {
+        height: 1.5rem;
+        filter: $dislikeFilter;
+      }
+    }
+  }
+  .countersDiv {
+    display: flex;
+    justify-content: space-around;
+    .likesCounter {
+      color: $likeColor;
+    }
+    .dislikesCounter {
+      color: $dislikeColor;
+    }
   }
 }

@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 
 import './card.scss';
 
-import Gauge from '../../containers/Card/Gauge';
 import DeleteButton from '../../containers/Card/DeleteButton';
+import Gauge from '../../containers/Card/Gauge';
+import Review from '../../components/Card/Review';
 
 // == Component
 
@@ -17,6 +18,7 @@ const Card = ({movie}) => {
       <h2 className="title">{movie.title}</h2>
       <span>{movie.category}</span>
       <Gauge likes={movie.likes} dislikes={movie.dislikes} />
+      <Review />
     </div>
   );
 } 
