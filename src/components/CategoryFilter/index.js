@@ -7,7 +7,7 @@ import './categoryFilter.scss';
 
 // == Component
 
-const CategoryFilter = ({ movies, filterByCategory }) => {
+const CategoryFilter = ({ movies, filterByCategory, setCurrentPage }) => {
   useEffect(() => {
   }, [movies]);
 
@@ -25,9 +25,9 @@ const CategoryFilter = ({ movies, filterByCategory }) => {
   });
 
   const selectOnChangeHandler = (e) => {
-    console.log(e.target.value);
     const category = e.target.value;
     filterByCategory(category);
+    setCurrentPage(1);
   };
 
   return (
@@ -47,6 +47,7 @@ const CategoryFilter = ({ movies, filterByCategory }) => {
 CategoryFilter.propTypes = {
   movies: PropTypes.array.isRequired,
   filterByCategory: PropTypes.func.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
 };
 
 // == Export

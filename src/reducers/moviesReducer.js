@@ -1,12 +1,14 @@
 // == Imports
 
-import { SAVE_MOVIES, DELETE_MOVIE, UPDATE_LIKES, UPDATE_DISLIKES, FILTER_BY_CATEGORY } from '../actions/movies';
+import { SAVE_MOVIES, DELETE_MOVIE, UPDATE_LIKES, UPDATE_DISLIKES, FILTER_BY_CATEGORY, SET_CURRENT_PAGE, SET_NUMBER_PER_PAGE } from '../actions/movies';
 
 // == Initial State
 
 const initialState = {
   movies: [],
   chosenCategory: '0',
+  currentPage: 1,
+  numberPerPage: 4,
 };
 
 // == Reducer
@@ -47,11 +49,21 @@ const moviesReducer = (state = initialState, action = {}) => {
         movies: updatedMovies,
       };
     };
-    case FILTER_BY_CATEGORY:
+    case FILTER_BY_CATEGORY: 
       return {
         ...state,
         chosenCategory: action.category,
       };
+    case SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.pageNumber,
+      }
+    case SET_NUMBER_PER_PAGE:
+      return {
+        ...state,
+        numberPerPage: action.quantity,
+      }
     default: return state;
   }
 };

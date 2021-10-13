@@ -6,6 +6,8 @@ export const DELETE_MOVIE = 'DELETE_MOVIE';
 export const UPDATE_LIKES = 'UPDATE_LIKES';
 export const UPDATE_DISLIKES = 'UPDATE_DISLIKES';
 export const FILTER_BY_CATEGORY = 'FILTER_BY_CATEGORY';
+export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+export const SET_NUMBER_PER_PAGE = 'SET_NUMBER_PER_PAGE';
 
 // == action creators
 
@@ -38,4 +40,14 @@ export const updateDislikes = (movieId, number) => ({
 export const filterByCategory = (category) => ({
   type: FILTER_BY_CATEGORY,
   category,
+});
+
+export const setCurrentPage = (pageNumber) => ({
+  type: SET_CURRENT_PAGE,
+  pageNumber,
+});
+
+export const setNumberPerPage = (quantity) => ({
+  type: SET_NUMBER_PER_PAGE,
+  quantity,
 });

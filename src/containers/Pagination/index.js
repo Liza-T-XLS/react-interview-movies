@@ -2,27 +2,24 @@
 
 import { connect } from 'react-redux';
 
-import DeleteButton from '../../../components/Card/DeleteButton';
+import Pagination from '../../components/Pagination';
 
-import { deleteMovie, filterByCategory, setCurrentPage } from '../../../actions/movies';
+import { setCurrentPage, setNumberPerPage } from '../../actions/movies';
+
+// == Map
 
 const mapStateToProps = (state, ownProps) => ({
-  movies: state.movies,
-  movieId: ownProps.movieId,
   currentPage: state.currentPage,
   pageQuantity: ownProps.pageQuantity,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  deleteMovie: (movieId) => {
-    dispatch(deleteMovie(movieId));
-  },
-  filterByCategory: (category) => {
-    dispatch(filterByCategory(category));
-  },
   setCurrentPage: (pageNumber) => {
     dispatch(setCurrentPage(pageNumber));
   },
+  setNumberPerPage: (quantity) => {
+    dispatch(setNumberPerPage(quantity));
+  }
 });
 
 // == Export
@@ -30,4 +27,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(DeleteButton);
+)(Pagination);

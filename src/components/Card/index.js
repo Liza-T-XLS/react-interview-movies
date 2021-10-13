@@ -11,10 +11,10 @@ import Review from '../../containers/Card/Review';
 
 // == Component
 
-const Card = ({movie}) => {
+const Card = ({ movie, pageQuantity }) => {
   return (
     <div className="card">
-      <DeleteButton movieId={movie.id} />
+      <DeleteButton movieId={movie.id} pageQuantity={pageQuantity} />
       <h2 className="title">{movie.title}</h2>
       <span>{movie.category}</span>
       <Gauge likes={movie.likes} dislikes={movie.dislikes} />
@@ -27,6 +27,7 @@ const Card = ({movie}) => {
 
 Card.propTypes = {
   movie: PropTypes.object.isRequired,
+  pageQuantity: PropTypes.number.isRequired,
 };
 
 // == Export

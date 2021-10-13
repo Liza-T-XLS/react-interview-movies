@@ -10,7 +10,6 @@ const moviesMiddleware = (store) => (next) => (action) => {
     case LOAD_MOVIES:
         movies$
         .then((response) => {
-          console.log(response);
           store.dispatch(saveMovies(response));
         })
         .catch((error) => {

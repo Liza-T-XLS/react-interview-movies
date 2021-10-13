@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import CategoryFilter from '../../components/CategoryFilter';
 
-import { filterByCategory } from '../../actions/movies';
+import { filterByCategory, setCurrentPage } from '../../actions/movies';
 
 // == Map
 
@@ -15,6 +15,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   filterByCategory: (category) => {
     dispatch(filterByCategory(category));
+  },
+  setCurrentPage: (pageNumber) => {
+    dispatch(setCurrentPage(pageNumber));
   },
 });
 
