@@ -8,6 +8,7 @@ export const UPDATE_DISLIKES = 'UPDATE_DISLIKES';
 export const FILTER_BY_CATEGORY = 'FILTER_BY_CATEGORY';
 export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 export const SET_NUMBER_PER_PAGE = 'SET_NUMBER_PER_PAGE';
+export const RESET_TO_INITIAL_STATE = 'RESET_TO_INITIAL_STATE';
 
 // == action creators
 
@@ -51,3 +52,7 @@ export const setNumberPerPage = (quantity) => ({
   type: SET_NUMBER_PER_PAGE,
   quantity,
 });
+
+export const resetToInitialState = () => ({
+  type: RESET_TO_INITIAL_STATE,
+})

@@ -24,7 +24,7 @@ const CategoryFilter = ({ movies, filterByCategory, setCurrentPage }) => {
     }
   });
 
-  const selectOnChangeHandler = (e) => {
+  const categoryFilterSelectOnChangeHandler = (e) => {
     const category = e.target.value;
     filterByCategory(category);
     setCurrentPage(1);
@@ -32,8 +32,9 @@ const CategoryFilter = ({ movies, filterByCategory, setCurrentPage }) => {
 
   return (
     <div className="categoryFilter">
-      <select onChange={selectOnChangeHandler}>
-        <option defaultValue value="0">Filter by category</option>
+      <label htmlFor="categoryFilterSelect">Filter by category</label>
+      <select name="categoryFilterSelect" id="categoryFilterSelect" onChange={categoryFilterSelectOnChangeHandler}>
+        <option defaultValue value="0">All</option>
         {options.map((option) => 
           <option key={option} value={option}>{option}</option>
         )}

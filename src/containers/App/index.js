@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import App from '../../components/App';
 
-import { loadMovies, setCurrentPage } from '../../actions/movies';
+import { loadMovies, setCurrentPage, resetToInitialState } from '../../actions/movies';
 
 const mapStateToProps = (state) => ({
   movies: state.movies,
@@ -20,6 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setCurrentPage: (pageNumber) => {
     dispatch(setCurrentPage(pageNumber));
+  },
+  resetToInitialState: () => {
+    dispatch(resetToInitialState());
   },
 });
 

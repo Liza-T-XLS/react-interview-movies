@@ -1,4 +1,14 @@
 .categoryFilter {
   text-align: center;
   margin: 0.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  label {
+    margin-bottom: 0.5rem;
+  }
+  #categoryFilterSelect {
+    text-align: center;
+  }
 }

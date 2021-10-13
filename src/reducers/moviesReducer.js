@@ -1,6 +1,15 @@
 // == Imports
 
-import { SAVE_MOVIES, DELETE_MOVIE, UPDATE_LIKES, UPDATE_DISLIKES, FILTER_BY_CATEGORY, SET_CURRENT_PAGE, SET_NUMBER_PER_PAGE } from '../actions/movies';
+import {
+  SAVE_MOVIES,
+  DELETE_MOVIE,
+  UPDATE_LIKES,
+  UPDATE_DISLIKES,
+  FILTER_BY_CATEGORY,
+  SET_CURRENT_PAGE,
+  SET_NUMBER_PER_PAGE,
+  RESET_TO_INITIAL_STATE,
+} from '../actions/movies';
 
 // == Initial State
 
@@ -63,6 +72,11 @@ const moviesReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         numberPerPage: action.quantity,
+      }
+    case RESET_TO_INITIAL_STATE:
+      return {
+        ...state,
+        ...initialState,
       }
     default: return state;
   }
