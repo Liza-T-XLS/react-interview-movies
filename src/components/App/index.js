@@ -5,9 +5,11 @@ import PropTypes from 'prop-types';
 
 import './app.scss';
 
+import Header from '../Header';
 import CategoryFilter from '../../containers/CategoryFilter';
 import Card from '../../containers/Card';
 import Pagination from '../../containers/Pagination';
+import Footer from '../Footer';
 
 // == Component
 
@@ -23,6 +25,7 @@ const App = ({ movies, loadMovies, chosenCategory, currentPage, numberPerPage })
   const moviesToDisplayOnThisPage = moviesToDisplay.slice(startIndex, endIndex);
   return (
     <div className="app">
+      <Header />
       <CategoryFilter />
       <div className="cards">
           {moviesToDisplayOnThisPage.map((movie) => (
@@ -37,6 +40,7 @@ const App = ({ movies, loadMovies, chosenCategory, currentPage, numberPerPage })
       {moviesToDisplay.length !== 0 && (
         <Pagination pageQuantity={pageQuantity} />
       )}
+      <Footer />
     </div>
   );
 } 

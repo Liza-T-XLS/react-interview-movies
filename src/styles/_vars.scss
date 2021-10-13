@@ -2,8 +2,15 @@
 
 $likeColor: #00ba7c;
 $dislikeColor: #e92929;
+$pageBackgroundColor: #f5c518;
+$cardBackgroundColor: #F4F4E5;
 
 // == filters
 
 $likeFilter: invert(39%) sepia(89%) saturate(1165%) hue-rotate(131deg) brightness(100%) contrast(101%);
 $dislikeFilter: invert(38%) sepia(68%) saturate(6878%) hue-rotate(348deg) brightness(95%) contrast(91%);
+
+// == fonts
+
+$titleFont: 'Lobster', cursive;
+$mainFont: 'Bree Serif', serif;

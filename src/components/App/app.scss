@@ -1,13 +1,35 @@
 .app {
+  padding: 0.5rem;
   .cards {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
+    justify-content: center;
   }
   .message {
     font-size: 1rem;
     font-weight: bold;
     margin: 2rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 481px) {
+  .app {
+    .cards {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .app {
+    .cards {
+      margin-right: 5rem;
+      margin-left: 5rem;
+    }
   }
 }

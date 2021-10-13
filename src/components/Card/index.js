@@ -14,11 +14,15 @@ import Review from '../../containers/Card/Review';
 const Card = ({ movie, pageQuantity }) => {
   return (
     <div className="card">
-      <DeleteButton movieId={movie.id} pageQuantity={pageQuantity} />
-      <h2 className="title">{movie.title}</h2>
-      <span>{movie.category}</span>
-      <Gauge likes={movie.likes} dislikes={movie.dislikes} />
-      <Review movieId={movie.id} />
+      <div className="top">
+        <DeleteButton movieId={movie.id} pageQuantity={pageQuantity} />
+        <h2 className="title">{movie.title}</h2>
+        <span className="category">{movie.category}</span>
+      </div>
+      <div className="bottom">
+        <Gauge likes={movie.likes} dislikes={movie.dislikes} />
+        <Review movieId={movie.id} />
+      </div>
     </div>
   );
 } 

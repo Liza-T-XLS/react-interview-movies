@@ -4,9 +4,13 @@
   .nav {
     display: flex;
     justify-content: center;
+    button {
+      margin: 0.2rem;
+    }
     .pageNumber {
       &:hover, &:active, &.active {
-        color: $likeColor;
+        color: black;
+        font-weight: bold;
       }
     }
   }

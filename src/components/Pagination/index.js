@@ -38,12 +38,12 @@ const Pagination = ({ currentPage, setCurrentPage, pageQuantity, setNumberPerPag
   return (
     <div className="pagination">
       <div className="nav">
-        <button className="previousButton" onClick={previousButtonOnClickHandler}>Previous</button>
+        <button className="previousButton" onClick={previousButtonOnClickHandler}>&lt;</button>
         {array.map((element) => (
           <button key={element} value={element} className={classNames('pageNumber', { active: currentPage === element })} onClick={pageNumberOnClickHandler}>{element}</button>
         ))
         }
-        <button className="nextButton" onClick={nextButtonOnClickHandler}>Next</button>
+        <button className="nextButton" onClick={nextButtonOnClickHandler}>&gt;</button>
       </div>
       <div className="displayOptions">
         <label htmlFor="displayOptions">Cards per page</label>
