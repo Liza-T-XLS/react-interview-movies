@@ -8,13 +8,6 @@ import './pagination.scss';
 
 // == Component
 
-// Ajouter un système de pagination avec les fonctionnalités suivantes:
-
-// Boutons précédent/suivant
-// Choix du nombre d'élements affichés par page (4, 8 ou 12).
-
-// TODO: when all movies are deleted?
-
 const Pagination = ({ currentPage, setCurrentPage, pageQuantity, setNumberPerPage }) => {
   const array = [];
   for (let quantity = 1; quantity <= pageQuantity; quantity++) {

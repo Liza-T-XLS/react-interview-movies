@@ -28,8 +28,15 @@ const App = ({ movies, loadMovies, chosenCategory, currentPage, numberPerPage })
           {moviesToDisplayOnThisPage.map((movie) => (
             <Card key={movie.id} {...movie} pageQuantity={pageQuantity} />
           ))}
+      </div>
+      {moviesToDisplay.length === 0 && (
+        <div className="message">
+          Well, it seems that we have hit the end of the road...
         </div>
-      <Pagination pageQuantity={pageQuantity} />
+      )}
+      {moviesToDisplay.length !== 0 && (
+        <Pagination pageQuantity={pageQuantity} />
+      )}
     </div>
   );
 } 

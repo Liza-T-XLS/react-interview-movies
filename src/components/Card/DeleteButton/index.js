@@ -7,7 +7,14 @@ import './deleteButton.scss';
 
 // == Component
 
-const DeleteButton = ({ movies, movieId, deleteMovie, filterByCategory, currentPage, setCurrentPage, numberPerPage }) => {
+const DeleteButton = ({
+  movies,
+  movieId,
+  deleteMovie,
+  filterByCategory,
+  currentPage,
+  setCurrentPage,
+  numberPerPage }) => {
   const deleteButtonOnClickHandler = () => {
     const movieCategory = movies.find((movie) => movie.id === movieId).category;
     const moviesOfSameCategory = movies.filter((movie) => movie.category === movieCategory);

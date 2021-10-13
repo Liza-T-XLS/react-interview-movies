@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
   movies: state.movies,
   movieId: ownProps.movieId,
   currentPage: state.currentPage,
-  pageQuantity: ownProps.pageQuantity,
+  numberPerPage: state.numberPerPage,
 });
 
 const mapDispatchToProps = (dispatch) => ({
