@@ -6,7 +6,7 @@ To install the project:
 2 - Install the project dependencies: yarn install
 3 - Run the project: yarn start
 
-To read the code with VS Code: https://github1s.com/Liza-T-XLS/To-Do-Typewriter
+To read the code with VS Code: https://github1s.com/Liza-T-XLS/react-interview-movies
 
 Available at: https://moviews2021.netlify.app/
 
